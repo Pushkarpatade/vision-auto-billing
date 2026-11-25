@@ -1,0 +1,82 @@
+/* ==========================================================================
+   VisionCheckout AI — Modern Stitch Styling
+   Matching Pushkar Patade Portfolio Design System
+   ========================================================================== */
+
+/* Modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Background Grid Pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Gradient Headlines */
+.gradient-headline {
+  background: linear-gradient(135deg, #0284c7 0%, #4f46e5 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-headline-cyan {
+  background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card Subtle Glow on Hover */
+.card-hover-glow {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-glow:hover {
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+/* Modal for Live Camera */
+.modal {
+  display: none;
+}
+.modal.open {
+  display: flex !important;
+}
+
+/* Shaking animation for loss prevention / theft warning */
+@keyframes shake-warning {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+.pill-warning {
+  animation: shake-warning 0.5s ease-in-out;
+}
+
+/* Receipt Print Styling */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, .sample-bar, .action-bar, .pos-actions, section:not(.lg\:col-span-5), .fixed {
+    display: none !important;
+  }
+  .lg\:col-span-5 {
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
